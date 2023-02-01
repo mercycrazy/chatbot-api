@@ -17,4 +17,11 @@
     <name>chatbot-api-application</name>
     <description>chatbot-api 应用层</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.github.mercycrazy</groupId>
+            <artifactId>chatbot-api-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -80,7 +80,7 @@ public class ApiTest {
 
         HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization", "Bearer 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");
+        post.addHeader("Authorization", "Bearer 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");
 
         String paramJson = "{\"model\": \"text-davinci-003\", \"prompt\": \"帮我写一个Java冒泡排序\", \"temperature\": 0, \"max_tokens\": 1024}";
 
