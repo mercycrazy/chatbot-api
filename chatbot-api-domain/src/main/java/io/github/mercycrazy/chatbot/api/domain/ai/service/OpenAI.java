@@ -12,9 +12,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -29,13 +26,8 @@ import java.util.List;
 @Service
 public class OpenAI implements IOpenAI {
 
-    private final Logger logger = LoggerFactory.getLogger(OpenAI.class);
-
-    @Value("${chatbot-api.openAiKey}")
-    private String openAiKey;
-
     @Override
-    public String doChatGPT(String question) throws IOException {
+    public String doChatGPT(String openAiKey, String question) throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
